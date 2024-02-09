@@ -1,0 +1,23 @@
+<!--<div *ngFor="let film of tabFilms">
+    <h3>
+      {{ film.nom }}
+    </h3>
+    <h4 *ngIf="film.descVisible">
+      {{ film.description }}
+    </h4><br>
+    <button class="btnInfo" (click)="afficheDesc(film)" *ngIf="!film.descVisible">Plus d'infos</button>
+    <button class="btnInfo" (click)="cacherDesc(film)" *ngIf="film.descVisible">Moins d'infos</button>
+    <br><br></div> -->
+   
+    <div *ngFor="let film of tabFilms">
+        <div>
+            {{ film.nom }}
+        </div>
+      
+        <button class="btnInfo" (click)="afficheDesc(film)" *ngIf="!film.descVisible">Plus d'infos</button>
+        <button class="btnInfo" (click)="cacherDesc(film)" *ngIf="film.descVisible">Moins d'infos</button>
+        <app-detail-film *ngIf="film.descVisible" [desc]="film.description ?? ''"></app-detail-film>
+
+        <br><br>
+    </div>
+    

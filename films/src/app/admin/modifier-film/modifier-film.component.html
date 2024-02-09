@@ -1,0 +1,12 @@
+<form (ngSubmit)="soumettre(f)" #f="ngForm">
+    <label for="nom">Nom du film</label>
+    <input type="text" id="nom" name="nom" [(ngModel)]="nomFilm" required #nomInput="ngModel">
+    <br>
+    <label for="description">Description du film</label>
+    <textarea id="description" name="description" [(ngModel)]="descriptionFilm"></textarea>
+    <br>
+    <input type="text" id="nom" name="nom" [(ngModel)]="nomFilm" required #nomInput="ngModel">
+    <div [hidden]="nomInput.valid || nomInput.pristine" class="alert alert-danger">Nom du film est obligatoire</div>
+
+    <button type="submit" [disabled]="f.invalid" class="btnInfo">Modifier</button>
+</form>

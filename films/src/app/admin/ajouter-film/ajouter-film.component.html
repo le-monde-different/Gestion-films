@@ -1,0 +1,8 @@
+<p>ajouter-film works!</p>
+<div class="contenu">
+     <label>Nom du film</label>
+      <input #nom><br> <label>Description du film</label> 
+      <input #desc><br> 
+      <button (click)="ajouterFilm(nom.value,desc.value)"
+        class="btnInfo">Ajouter</button>
+     </div>

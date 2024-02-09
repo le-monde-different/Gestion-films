@@ -1,0 +1,10 @@
+<p>admin works!</p>
+<h1>Bienvenue Administrateur
+<nav>
+    <a routerLink="lister-films" routerLinkActive="active">Liste des films</a>&nbsp;
+    <a routerLink="ajouter-film" routerLinkActive="active">Ajouter un film</a>
+    <a routerLink="/visiteur" routerLinkActive="active" id="lk">voir visiteur</a>
+    <a (click)="logout()" class="logout-link">Deconnexion</a>
+</nav>
+</h1>
+<router-outlet></router-outlet>

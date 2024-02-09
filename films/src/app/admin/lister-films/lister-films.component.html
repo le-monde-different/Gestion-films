@@ -1,0 +1,14 @@
+<p>lister-films works!</p>
+<div *ngFor="let film of tabFilms">
+    <h3>
+      {{ film.nom }}
+    </h3>
+    <h4 *ngIf="film.descVisible">
+      {{ film.description }}
+    </h4>
+    <button (click)="supprimerFilm(film)">Supprimer</button>
+    <a [routerLink]="['/admin/details', film.id]">Détails</a>
+    <button [routerLink]="['/admin/modifier', film.id]">Modifier</button>
+
+    </div>
+    

@@ -1,0 +1,21 @@
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px;
+    padding: 5px;
+}
+
+nav {
+    background-color: #f8f8f8;
+}
+
+.active {
+    background-color: red;
+}
+
+a:active {
+    color: black;
+}
+#lk{
+    margin-left: 40%
+}
